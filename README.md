@@ -1,34 +1,83 @@
-# API AGENDA
+# Fast_API_Groq
 
-## 1 - script con las siguientes caracteristicas:
-### 1.1 crear la base de datos db_agenda
-### 1.2 crear la tabla personas
-### 1.3 insertar 3 registros
+## 0. Actualizar la lista de versiones de las librerias del sitema operativo
 
-## 2 - configurar el respositorio con los siguientes elementos:
-### 2.1 README.md
-### 2.2 LICENSE
-### 2.3 requirements.txt (fastapi)
-### 2.4 .gitignore
+Actualiza la lista de versiones de las librerias del sitema operativo.
 
-## 3 - instalar mysql
+````shell
+sudo apt update
+````
+## 1. Instalar neofetch
+
+Instalar neofetch para conocer las caracteristica del sistema operativo que se esta usando
+
 ````bash
-sudo apt-get update
-sudo apt-get install mysql-server -y
+sudo apt install neofetch -y
 ````
-## 4 - iniciar sesion en el servidor
+## 2. Ejecutar neofetch
+
+Ejecutar neofetch
+
 ````bash
-sudo service mysql start
+neofetch
 ````
-## 5 - Actualizar el repositorio
-````bash 
-sudo apt-get update
+Nota: crear el archivo OS.txt con la version del sistema
+## 3. crear un ambiente virtual
+
+````shell
+virtualenv venv
 ````
-## 6 - Configurar la contraseña de root 
+
+## 4. Entrar al ambiente virtual
+
+iniciar el ambiente virtual
+
 ````bash
-sudo mysql_secure_installation
+source venv/bin/activate
 ````
-## 7 - Acceder a MySQL 
-```` bash
-sudo mysql -u root -p
+
+## 5. salir del ambiente virtual
+
+descartivar el ambiente virtual
+
+````bash
+deactivate
+````
+
+## 6. crear el archivo .gitignore
+
+crear el archivo .gitignore
+
+````bash
+*.pyc
+__pycache__/
+venv/
+````
+## 7. instalar las libreria nesesarias
+
+para este pryecto se usaran las librerias de [FastAPI](https://fastapi.tiangolo.com/)
+````bash
+pip install "fastapi[standard]"
+````
+
+## 8. crear el archivo requirements.txt
+
+se genera el archivo requirements.txt para listaar las librerias necesarias para el proyecto y sus versiones
+
+````bash
+pip freeze > requirements.txt
+````
+## 9. crear el archivo runtime
+
+crear el archivo runtime con la version de python que se esta utilizando
+
+````bash
+python3 -V > runtime
+````
+## 10. Indexar los archivos creados con git
+
+````bash
+git add. 
+git commit -m (nombre)
+git push -u origin main
 ````
